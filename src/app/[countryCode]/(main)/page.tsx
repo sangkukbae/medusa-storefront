@@ -17,13 +17,17 @@ const getCollectionsWithProducts = cache(
   async (
     countryCode: string
   ): Promise<ProductCollectionWithPreviews[] | null> => {
-    const { collections } = await getCollectionsList(0, 3)
+    const { collections } = await getCollectionsList(0, 10)
 
     if (!collections) {
       return null
     }
 
-    const collectionIds = collections.map((collection) => collection.id)
+    const collectionIds = collections
+      .sort(
+        (a, b) => (a.metadata?.order as number) - (b.metadata?.order as number)
+      )
+      .map((collection) => collection.id)
 
     await Promise.all(
       collectionIds.map((id) =>
@@ -46,7 +50,10 @@ const getCollectionsWithProducts = cache(
           return
         }
 
-        collection.products = response.products as unknown as Product[]
+        collection.products = response.products.slice(
+          0,
+          3
+        ) as unknown as Product[]
       })
     )
 

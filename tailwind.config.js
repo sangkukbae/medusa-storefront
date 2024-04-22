@@ -2,7 +2,7 @@ const path = require("path")
 
 module.exports = {
   darkMode: "class",
-  presets: [require("@medusajs/ui-preset")],
+  // presets: [require("@medusajs/ui-preset")],
   content: [
     "./src/app/**/*.{js,ts,jsx,tsx}",
     "./src/pages/**/*.{js,ts,jsx,tsx}",
@@ -58,18 +58,18 @@ module.exports = {
       fontSize: {
         "3xl": "2rem",
       },
-      fontFamily: {
-        sans: [
-          "Inter",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Ubuntu",
-          "sans-serif",
-        ],
-      },
+      // fontFamily: {
+      //   sans: [
+      //     "Inter",
+      //     "-apple-system",
+      //     "BlinkMacSystemFont",
+      //     "Segoe UI",
+      //     "Roboto",
+      //     "Helvetica Neue",
+      //     "Ubuntu",
+      //     "sans-serif",
+      //   ],
+      // },
       keyframes: {
         ring: {
           "0%": { transform: "rotate(0deg)" },

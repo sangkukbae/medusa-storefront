@@ -55,3 +55,16 @@ export const noDivisionCurrencies = [
   "xdr",
   "xau",
 ]
+
+export const mainImages = [
+  {
+    src: "/images/hero-01.jpg",
+    alt: "Hero Image 1",
+    href: "/products/cflonge-womens-2-piece-outfits-casual-sleeveless-halter-crop-top-and-draped-ruched-skirt-solid-set-for-cocktail-party",
+  },
+  {
+    src: "/images/hero-02.jpg",
+    alt: "Hero Image 2",
+    href: "/products/adrianna-papell-womens-halter-art-deco-beaded-blouson-dress",
+  },
+]
